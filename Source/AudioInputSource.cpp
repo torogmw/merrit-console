@@ -20,6 +20,7 @@ AudioInputSource::AudioInputSource(AudioDeviceManager& deviceManager_, AudioAnal
 
 AudioInputSource::~AudioInputSource()
 {
+    deleteAndZero(tempReader);
     deviceManager.removeAudioCallback(this);
     transportSource.setSource(0);
     deleteAndZero(fileSource);
@@ -30,8 +31,8 @@ void AudioInputSource::setFile(File audioFile)
 {
     if(audioFile.exists())
     {
-        AudioFormatReader* tempReader = formatManager.createReaderFor(audioFile);
-        fileSource = new AudioFormatReaderSource(tempReader,true);
+        tempReader = formatManager.createReaderFor(audioFile);
+        fileSource = new AudioFormatReaderSource(tempReader, false);
         transportSource.setSource(fileSource,32768,&playingThread,FS_MIR);
         deviceManager.addAudioCallback(this); // will call audioDeviceIOCallback
         

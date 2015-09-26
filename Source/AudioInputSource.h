@@ -32,7 +32,7 @@ public:
     bool isPlaying() const;
 
 private:
-    
+    AudioFormatReader* tempReader;
     AudioDeviceManager& deviceManager;
     AudioSourcePlayer audioSourcePlayer;
     AudioFormatReaderSource* fileSource;
