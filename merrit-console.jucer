@@ -39,7 +39,7 @@
         <MODULEPATH id="juce_core" path="../JUCE-OSX/modules"/>
         <MODULEPATH id="juce_events" path="../JUCE-OSX/modules"/>
         <MODULEPATH id="juce_data_structures" path="../JUCE-OSX/modules"/>
-        <MODULEPATH id="juce_audio_basics" path="../JUCE-OSX/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../merrit-console/JuceLibraryCode/modules"/>
         <MODULEPATH id="juce_audio_formats" path="../JUCE-OSX/modules"/>
         <MODULEPATH id="juce_audio_devices" path="../JUCE-OSX/modules"/>
       </MODULEPATHS>
@@ -55,19 +55,19 @@
         <MODULEPATH id="juce_core" path="../JUCE-OSX/modules"/>
         <MODULEPATH id="juce_events" path="../JUCE-OSX/modules"/>
         <MODULEPATH id="juce_data_structures" path="../JUCE-OSX/modules"/>
-        <MODULEPATH id="juce_audio_basics" path="../JUCE-OSX/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../merrit-console/JuceLibraryCode/modules"/>
         <MODULEPATH id="juce_audio_formats" path="../JUCE-OSX/modules"/>
         <MODULEPATH id="juce_audio_devices" path="../JUCE-OSX/modules"/>
       </MODULEPATHS>
     </LINUX_MAKE>
   </EXPORTFORMATS>
   <MODULES>
-    <MODULES id="juce_audio_basics" showAllCode="1" useLocalCopy="0"/>
-    <MODULES id="juce_audio_devices" showAllCode="1" useLocalCopy="0"/>
-    <MODULES id="juce_audio_formats" showAllCode="1" useLocalCopy="0"/>
-    <MODULES id="juce_core" showAllCode="1" useLocalCopy="0"/>
-    <MODULES id="juce_data_structures" showAllCode="1" useLocalCopy="0"/>
-    <MODULES id="juce_events" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_audio_basics" showAllCode="1" useLocalCopy="1"/>
+    <MODULES id="juce_audio_devices" showAllCode="1" useLocalCopy="1"/>
+    <MODULES id="juce_audio_formats" showAllCode="1" useLocalCopy="1"/>
+    <MODULES id="juce_core" showAllCode="1" useLocalCopy="1"/>
+    <MODULES id="juce_data_structures" showAllCode="1" useLocalCopy="1"/>
+    <MODULES id="juce_events" showAllCode="1" useLocalCopy="1"/>
   </MODULES>
   <JUCEOPTIONS/>
 </JUCERPROJECT>
