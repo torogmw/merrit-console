@@ -62,6 +62,10 @@ public:
     uint32_t frame_num;
     TimedNotes audio_notes;
     TimedNotes score_notes;
+
+private:
+    int lastNotePitch;
+    float lastNoteOnset;
 };
 
 #endif /* defined(__merrit_core__AudioAnalyzer__) */

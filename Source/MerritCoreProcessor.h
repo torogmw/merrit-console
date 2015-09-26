@@ -12,7 +12,7 @@
 #include <stdio.h>
 #include "JuceHeader.h"
 #include "AudioInputSource.h"
-
+#include <map>
 
 class MerritCoreProcessor {
 
@@ -25,6 +25,7 @@ public:
     
 private:
     // auio objects
+    std::map<int, int> rawOnsets;
     AudioDeviceManager deviceManager;
     juce::AudioDeviceManager::AudioDeviceSetup audioDeviceSetup;
     ScopedPointer<AudioInputSource> inputSource;

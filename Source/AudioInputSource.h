@@ -14,6 +14,7 @@
 #include <iostream>
 #include "JuceHeader.h"
 #include "AudioAnalyzer.h"
+#include <map>
 
 class AudioInputSource : public AudioIODeviceCallback
 {
@@ -27,7 +28,7 @@ public:
                                int numSamples);
     void audioDeviceAboutToStart (AudioIODevice* device);
     void audioDeviceStopped();
-    void setFile(File audioFile);
+    std::map<int, int> setFile(File audioFile);
     void filePlayingControl();
     bool isPlaying() const;
 
@@ -41,7 +42,7 @@ private:
     TimeSliceThread playingThread;
     AudioAnalyzer *audioAnalyzer;
     int numSamplesReadFromFile;
-    AudioSampleBuffer fullBuffer = AudioSampleBuffer(1, FS_MIR * 60); // start with an empty buffer and fill with audio data, 661500 = 11025 * 60
+    AudioSampleBuffer fullBuffer = AudioSampleBuffer(1, FS_MIR * 600); // start with an empty buffer and fill with audio data, 661500 = 11025 * 60
 };
 
 #endif /* defined(__merrit_core__AudioInputSource__) */

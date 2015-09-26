@@ -204,17 +204,23 @@ int AudioAnalyzer::SubbandAnalysis(std::vector<float> &subband_signal, uint32_t 
     }
     
     // find local peaks in flux
-    if (flux[0] > flux[1]) {
+    lastNotePitch = 0;
+    lastNoteOnset = 0;
+    if (flux[0] > flux[1] && flux[0] > 0.5 &&  midi_note != lastNotePitch) {
         struct Note audio_note = {midi_note, flux[0]};
         audio_notes[0.f].push_back(audio_note);
+        lastNotePitch = midi_note;
     }
     for (i=1; i<frame_num-1; i++) {
-        if (flux[i-1] < flux[i] && flux[i] > flux[i+1]) {
+        float tempTime = i*hop_size/fs;
+        if (flux[i-1] < flux[i] && flux[i] > flux[i+1] && flux[i] > 0.5 && midi_note !=lastNotePitch && (tempTime-lastNoteOnset) > 0.7) {
             struct Note audio_note = {midi_note, flux[i]};
             audio_notes[i*hop_size / fs].push_back(audio_note);
+            lastNoteOnset = tempTime;
+            lastNotePitch = midi_note;
         }
     }
-    if (flux[frame_num-2] < flux[frame_num-1]) {
+    if (flux[frame_num-2] < flux[frame_num-1] && flux[frame_num - 1] > 0.5 ) {
         struct Note audio_note = {midi_note, flux[frame_num-1]};
         audio_notes[(frame_num-1)*hop_size /fs].push_back(audio_note);
     }
