@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="zXzmpx" name="merrit-console" projectType="consoleapp" version="1.0.0"
+              bundleIdentifier="com.merrit.merritconsole" includeBinaryInAppConfig="1"
+              jucerVersion="3.2.0">
+  <MAINGROUP id="UvIKKu" name="merrit-console">
+    <GROUP id="{58361F37-2E63-6305-A9AC-6C7D5D6DA677}" name="Source">
+      <FILE id="iS9Jc1" name="MerritCoreProcessor.cpp" compile="1" resource="0"
+            file="Source/MerritCoreProcessor.cpp"/>
+      <FILE id="tIuWwM" name="MerritCoreProcessor.h" compile="0" resource="0"
+            file="Source/MerritCoreProcessor.h"/>
+      <FILE id="PuJKam" name="AudioAnalyzer.cpp" compile="1" resource="0"
+            file="Source/AudioAnalyzer.cpp"/>
+      <FILE id="Zgq0mU" name="AudioAnalyzer.h" compile="0" resource="0" file="Source/AudioAnalyzer.h"/>
+      <FILE id="fLUoZV" name="AudioInputSource.cpp" compile="1" resource="0"
+            file="Source/AudioInputSource.cpp"/>
+      <FILE id="n6pqts" name="AudioInputSource.h" compile="0" resource="0"
+            file="Source/AudioInputSource.h"/>
+      <FILE id="zvqWkR" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+      <FILE id="jZJDb9" name="MusicXmlParser.cpp" compile="1" resource="0"
+            file="Source/MusicXmlParser.cpp"/>
+      <FILE id="WOhZax" name="MusicXmlParser.h" compile="0" resource="0"
+            file="Source/MusicXmlParser.h"/>
+      <FILE id="O5dpZ1" name="rsrfft.cxx" compile="1" resource="0" file="Source/rsrfft.cxx"/>
+      <FILE id="e47JQr" name="rsrfft.h" compile="0" resource="0" file="Source/rsrfft.h"/>
+      <FILE id="od0RRD" name="Song.cpp" compile="1" resource="0" file="Source/Song.cpp"/>
+      <FILE id="ungo6T" name="Song.h" compile="0" resource="0" file="Source/Song.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" osxSDK="default" osxCompatibility="default" osxArchitecture="default"
+                       isDebug="1" optimisation="1" targetName="merrit-console"/>
+        <CONFIGURATION name="Release" osxSDK="default" osxCompatibility="default" osxArchitecture="default"
+                       isDebug="0" optimisation="3" targetName="merrit-console"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../JUCE-OSX/modules"/>
+        <MODULEPATH id="juce_events" path="../JUCE-OSX/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../JUCE-OSX/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../JUCE-OSX/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../JUCE-OSX/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../JUCE-OSX/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+    <LINUX_MAKE targetFolder="Builds/LinuxMakefile">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" libraryPath="/usr/X11R6/lib/" isDebug="1" optimisation="1"
+                       targetName="merrit-console"/>
+        <CONFIGURATION name="Release" libraryPath="/usr/X11R6/lib/" isDebug="0" optimisation="3"
+                       targetName="merrit-console"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../JUCE-OSX/modules"/>
+        <MODULEPATH id="juce_events" path="../JUCE-OSX/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../JUCE-OSX/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../JUCE-OSX/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../JUCE-OSX/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../JUCE-OSX/modules"/>
+      </MODULEPATHS>
+    </LINUX_MAKE>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULES id="juce_audio_basics" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_audio_devices" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_audio_formats" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_core" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_data_structures" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_events" showAllCode="1" useLocalCopy="0"/>
+  </MODULES>
+  <JUCEOPTIONS/>
+</JUCERPROJECT>
