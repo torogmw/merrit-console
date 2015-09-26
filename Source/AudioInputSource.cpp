@@ -53,12 +53,21 @@ std::map<int, int> AudioInputSource::setFile(File audioFile)
             audioAnalyzer->SubbandAnalysis(audioAnalyzer->subband_signals[i], i+audioAnalyzer->min_note);
         }
         
+        float maxValence=0;
+        for (TimedNotes::iterator it = audioAnalyzer->audio_notes.begin(); it != audioAnalyzer->audio_notes.end(); it++) {
+            for (std::vector<struct Note>::iterator kt=it->second.begin(); kt!=it->second.end(); kt++) {
+                if (kt->valence  > maxValence) {
+                    maxValence = kt->valence;
+                }
+            }
+        }
+        
         for (TimedNotes::iterator it = audioAnalyzer->audio_notes.begin(); it != audioAnalyzer->audio_notes.end(); it++) {
             printf("%f:", it->first);
             for (std::vector<struct Note>::iterator kt=it->second.begin(); kt!=it->second.end(); kt++) {
                 int timeMs = int(it->first * 1000);
-                float valence = kt->valence <= 1 ? kt->valence : 1;
-                rawOnsets[timeMs] = valence * 100.0;
+                float valence = (kt->valence / maxValence) * 25 + 75;
+                rawOnsets[timeMs] = valence;
                 printf("%u,%f ", kt->midi_pitch, kt->valence);
             }
             printf("\n");
