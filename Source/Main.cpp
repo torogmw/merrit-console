@@ -15,8 +15,8 @@
 int main (int argc, char* argv[])
 {
     // read fileparth through argument
-    //File audioFile = File("../Debug/canon.mp3");
-    File audioFile = File(argv[1]);
+    File audioFile = File("../Debug/meditation.mp3");
+    //File audioFile = File(argv[1]);
     MerritCoreProcessor* core = new MerritCoreProcessor(audioFile);
    
     core->processAudio(argv[3]);

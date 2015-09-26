@@ -120,6 +120,7 @@ void AudioFormatReader::read (AudioSampleBuffer* buffer,
                               bool useReaderLeftChan,
                               bool useReaderRightChan)
 {
+    std::cout<<startSample <<"\t"<<startSample + numSamples <<"\t" << buffer->getNumSamples()<<std::endl;
     jassert (buffer != nullptr);
     jassert (startSample >= 0 && startSample + numSamples <= buffer->getNumSamples());
 

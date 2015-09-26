@@ -37,12 +37,12 @@ void AudioInputSource::setFile(File audioFile)
         deviceManager.addAudioCallback(this); // will call audioDeviceIOCallback
         
         // for file input, get the whole buffer and run MIR here
-//        fullBuffer.clear();
-//        tempReader->read(&fullBuffer, 0, tempReader->lengthInSamples, 0, true, false);
-//        numSamplesReadFromFile = tempReader->lengthInSamples;
-//        
-//        audioAnalyzer->Clear();
-//        
+        fullBuffer.clear();
+        tempReader->read(&fullBuffer, 0, tempReader->lengthInSamples, 0, true, false);
+        numSamplesReadFromFile = tempReader->lengthInSamples;
+        
+        audioAnalyzer->Clear();
+//
 //        for (int i=0; (i+audioAnalyzer->frame_size) < numSamplesReadFromFile; i+=audioAnalyzer->hop_size) {
 //            audioAnalyzer->UpdateFrameBuffer(fullBuffer.getReadPointer(0, i), audioAnalyzer->hop_size);
 //            audioAnalyzer->FrameAnalysis(audioAnalyzer->frame_buffer);

@@ -9,13 +9,45 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../JuceLibraryCode/modules/juce_audio_formats/format/juce_AudioFormatReaderSource.cpp"
-            timestampString = "464992606.341247"
+            filePath = "../../Source/AudioInputSource.cpp"
+            timestampString = "464994162.475227"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "AudioFormatReaderSource::AudioFormatReaderSource (AudioFormatReader* const r, const bool deleteReaderWhenThisIsDeleted)"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "AudioInputSource::setFile(File audioFile)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Source/AudioInputSource.cpp"
+            timestampString = "464994280.578219"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "AudioInputSource::setFile(File audioFile)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../JuceLibraryCode/modules/juce_audio_formats/format/juce_AudioFormatReader.cpp"
+            timestampString = "464994453.162376"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "AudioFormatReader::read (AudioSampleBuffer* buffer, int startSample, int numSamples, int64 readerStartSample, bool useReaderLeftChan, bool useReaderRightChan)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
